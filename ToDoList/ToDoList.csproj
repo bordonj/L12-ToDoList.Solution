@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+  <!-- need to add line 5 to show the UI or program -->
+    <OutputType>Exe</OutputType> 
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
