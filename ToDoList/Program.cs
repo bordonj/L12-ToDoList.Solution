@@ -18,29 +18,23 @@ namespace ToDoList
       }
       else if (userAnswer == "view")
         { 
-          var list = Item.GetAll();
-          list.ForEach(Console.WriteLine);
+          ViewItems();
         }
-    
-      
     }
     static void AddItem()
     {
       Console.WriteLine("Please enter description of the Item you would like to add:");
       string newItem = Console.ReadLine();
       Item addedItem = new Item(newItem);
-      Console.WriteLine($"{newItem} has been added to your list!! Would you like to add an item to your list or view your list? (add/view)");
-      string userAnswer = Console.ReadLine();
-      if (userAnswer == "add") 
-      {
-        AddItem();
-      }
-      else if (userAnswer == "view")
-        { 
-          List<Item> result = Item.GetAll();
-          result.ForEach((item) => Console.WriteLine(item.Description));
-        }
+      Console.WriteLine($"{newItem} has been added to your list!!");
+      Main();
     }
 
+    static void ViewItems()
+    {
+      List<Item> result = Item.GetAll();
+      result.ForEach((item) => Console.WriteLine(item.Description));
+      Main();
+    }
   }
 }
