@@ -1,13 +1,17 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;// omg I forgot the s on TestTools
 using ToDoList.Models;
 
-namespace ToDoList.Tests
+namespace ToDoList.Tests// accidentally made this .Models instead of .Tests
 {
   [TestClass]
   public class ItemTests
   {
 
-    // Test methods will go here.
-
+    [TestMethod]
+    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    {
+      Item newItem = new Item();
+      Assert.AreEqual(typeof(Item), newItem.GetType());
+    }
   }
 }
