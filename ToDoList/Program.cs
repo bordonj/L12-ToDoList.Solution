@@ -37,14 +37,8 @@ namespace ToDoList
       }
       else if (userAnswer == "view")
         { 
-          // var list = Item.GetAll();
-          // list.ForEach(Console.WriteLine(Item.Description));
           List<Item> result = Item.GetAll();
-          // for (int i = 0; i < result.Count; i++)
-          // {
-          //   (Console.WriteLine(Item.Description));
-          // }
-          result.ForEach((item) => Console.WriteLine(Item.Description));
+          result.ForEach((item) => Console.WriteLine(item.Description));
         }
     }
 
